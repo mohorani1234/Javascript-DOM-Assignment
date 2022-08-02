@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--HTML for UAT Space in CSC102
+    By: Mohanad Horani
+    mohhoran@uat.edu-->
+<html>
+    <head>
+        <!--links up code.js with our html file-->
+        <script src="code.js"></script>
+        <script src="launchDataDis.js"></script>
+        <!-- Stylesheet link-->
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <!--title at top bar for webpage-->
+        <title>
+            Mohanad's UATSpace Page
+    </title>
+
+    <script>
+        //create some needed variable for the dom
+        var theTime = new Date();
+        var time_interval = 5000;
+        var last_interaction = 0;
+        var running = true;
+        var index = 0;
+        var timer;
+        var data = getData();
+    </script>
+
+</head>
+
+
+
+<body>
+    <table>
+        <td><img src = "UATspaceLogo.jpg"></td>
+        <td><h1>UAT Space Program</h1></td>
+    </table>
+    <br>
+    <table id="data" width="70%" border="2">
+        <col width ="35%"><col width = "35%">
+        <thead>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <body>
+            <tr id ="seconds">
+                <td>Time Elapsed</td>
+                <td>15 Seconds</td>
+            </tr>
+            <tr id="">
+                <td>Latitude</td>
+                <td>0</td>
+            </tr>
+            <tr id="">
+                <td>Longitude</td>
+                <td>0</td>
+            </tr>
+            <tr id="gpsAltitude">
+                <td>GPS Altitude</td>
+                <td>0</td>
+            </tr>
+            <tr id="tmpSensorAlt">
+                <td>BMP Sensor Altitude</td>
+                <td>30383.04</td>
+            <tr id="bmpSensorPress">
+                <td>BMP Sensor Pressure</td>
+                <td>2.34</td>
+            </tr>
+            <tr id ="bmpSensorTemps">
+                <td>BMP Sensor Temperature</td>
+                <td>0</td>
+            </tr>
+            <tr id="digSensorTemp">
+                <td>Digital Sensor Temperature</td>
+                <td>24.12</td>
+            </tr>
+            <tr id="cssSensorTemp"></tr>
+            <tr id="cssSensorC02"></tr>
+            <tr id="cssSensorTVOC"></tr>
+            <tr id="UV"></tr>
+            <tr id="accelX"></tr>
+            <tr id="accelY"></tr>
+            <tr id="accelZ"></tr>
+            <tr id ="magneticX"></tr>
+            <tr id="magneticY"></tr>
+            <tr id ="magenticZ"></tr>
+            <tr id ="gyroX"></tr>
+            <tr id ="gyroY"></tr>
+            <tr id="gyroZ"></tr>
+            </tr>
+    </table>
+    <br>
+    <br>
+    <!--Big bold header material-->
+    <br>
+    <br>
+    <button onclick="start();" id="startButton">Start</button>
+    <button onclick="stop();" id="stopButton">Stop</button>
+    <br>
+    <br>
+    <br>
+    Countdown Timer<br>
+    <div id="countdownDisplay">Countdown will display here</div>
+    <br>
+    <!--Die1 results display window-->
+    Die1 result: <div id="die1Res">result here when started</div><br>
+    <!--Die2 results display window-->
+    Die2 result: <div id="die2Res">result here when started</div><br>
+    <!--Game result display window-->
+    Game result: <div id="gameRes">result here when started</div><br>
+    <!--Creates a line break in the code-->
+    <br>
+    <!--Displays a button that can be clicked which is titled "playCraps"-->
+    <button onclick= "playCraps();">Play Craps</button>
+    </body>
+</html>
